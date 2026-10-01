@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>Flappy Neon</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="app">
+  <canvas id="game" width="480" height="720"></canvas>
+
+  <section id="menu" class="screen">
+    <div class="badge">NEON ARCADE // 01</div>
+    <h1>FLAPPY<br><span>NEON</span></h1>
+    <p>One tap. One flight. Beat your best.</p>
+    <button id="start">START GAME</button>
+    <div class="keys">SPACE / CLICK / TAP — FLAP</div>
+  </section>
+
+  <section id="gameover" class="screen hidden">
+    <div class="badge danger">FLIGHT TERMINATED</div>
+    <h2>GAME OVER</h2>
+    <div class="scores">
+      <div><small>SCORE</small><strong id="finalScore">0</strong></div>
+      <div><small>BEST</small><strong id="finalBest">0</strong></div>
+    </div>
+    <button id="again">FLY AGAIN</button>
+    <button id="home" class="secondary">MAIN MENU</button>
+  </section>
+
+  <div id="hud" class="hidden">
+    <span id="score">0</span>
+    <span id="best">BEST 0</span>
+    <button id="pause">Ⅱ</button>
+  </div>
+
+  <section id="pauseScreen" class="screen hidden">
+    <div class="badge">SYSTEM PAUSED</div>
+    <h2>PAUSED</h2>
+    <button id="resume">RESUME</button>
+    <button id="restart" class="secondary">RESTART</button>
+  </section>
+
+  <div id="toast"></div>
+</main>
+<script src="game.js"></script>
+</body>
+</html>
